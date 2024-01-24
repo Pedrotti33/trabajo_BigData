@@ -1,0 +1,159 @@
+"0","#remotes::install_github(""perezp44/pjpv.curso.R.2022"")
+"
+"2","Warning message:
+"
+"2","R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed. 
+"
+"0","#install.packages(""pxR"")"
+"0","#install.packages(""downloader"")"
+"0","#install.packages(""readxl"")"
+"0","#install.packages(""mapSpain"")"
+"0","#install.packages(""kableExtra"")"
+"0","library(kableExtra)"
+"2","Warning: package ‘kableExtra’ was built under R version 4.3.2"
+"0","library(mapSpain)"
+"2","Warning: package ‘mapSpain’ was built under R version 4.3.2"
+"0","library(tidyverse)"
+"2","Warning: package ‘tidyverse’ was built under R version 4.3.2"
+"2","Warning: package ‘ggplot2’ was built under R version 4.3.2"
+"2","── [1mAttaching core tidyverse packages[22m ───────────────────────────────── tidyverse 2.0.0 ──
+[32m✔[39m [34mdplyr    [39m 1.1.3     [32m✔[39m [34mreadr    [39m 2.1.4
+[32m✔[39m [34mforcats  [39m 1.0.0     [32m✔[39m [34mstringr  [39m 1.5.0
+[32m✔[39m [34mggplot2  [39m 3.4.4     [32m✔[39m [34mtibble   [39m 3.2.1
+[32m✔[39m [34mlubridate[39m 1.9.2     [32m✔[39m [34mtidyr    [39m 1.3.0
+[32m✔[39m [34mpurrr    [39m 1.0.2     "
+"2","── [1mConflicts[22m ─────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m     masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mgroup_rows()[39m masks [34mkableExtra[39m::group_rows()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m        masks [34mstats[39m::lag()
+[36mℹ[39m Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors"
+"0","library(data.table)"
+"2","data.table 1.14.8 using 1 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","
+Attaching package: ‘data.table’
+
+"
+"2","The following objects are masked from ‘package:lubridate’:
+
+    hour, isoweek, mday, minute, month, quarter, second, wday, week, yday, year
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    transpose
+
+"
+"0","library(rlist)"
+"2","Warning: package ‘rlist’ was built under R version 4.3.2"
+"0","library(fs)"
+"0","library(curl)"
+"2","Using libcurl 7.84.0 with Schannel
+"
+"2","
+Attaching package: ‘curl’
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    parse_date
+
+"
+"0","library(rio)"
+"2","The following rio suggested packages are not installed: ‘arrow’, ‘hexView’, ‘fst’, ‘pzfx’, ‘rmatio’, ‘readODS’, ‘qs’
+Use 'install_formats()' to install them
+"
+"0","library(readxl)"
+"2","Warning: package ‘readxl’ was built under R version 4.3.2"
+"0","library(downloader)"
+"2","Warning: package ‘downloader’ was built under R version 4.3.2"
+"0","library(writexl)"
+"0","library(dplyr)"
+"0","library(ggthemes)"
+"2","Warning: package ‘ggthemes’ was built under R version 4.3.2"
+"0","library(ggExtra)"
+"2","Warning: package ‘ggExtra’ was built under R version 4.3.2"
+"0","library(pxR)"
+"2","Warning: package ‘pxR’ was built under R version 4.3.2"
+"2","Loading required package: reshape2
+"
+"2","Warning: package ‘reshape2’ was built under R version 4.3.2"
+"2","
+Attaching package: ‘reshape2’
+
+"
+"2","The following objects are masked from ‘package:data.table’:
+
+    dcast, melt
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    smiths
+
+"
+"2","Loading required package: RJSONIO
+"
+"2","Warning: package ‘RJSONIO’ was built under R version 4.3.2"
+"2","Loading required package: plyr
+"
+"2","---------------------------------------------------------------------------------------
+"
+"2","You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+"
+"2","---------------------------------------------------------------------------------------
+"
+"2","
+Attaching package: ‘plyr’
+
+"
+"2","The following objects are masked from ‘package:dplyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise, summarize
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    compact
+
+"
+"0","library(patchwork)"
+"2","Warning: package ‘patchwork’ was built under R version 4.3.2"
+"0","#Descargamos el primer fichero de datos, que contiene los datos a nivel nacional"
+"0","url <- ""https://www.ine.es/jaxiT3/files/t/es/px/50902.px?nocab=1"""
+"0","aa <- read.px(url)"
+"0",""
+"0","#Lo convertimos a CSV para simplificar y creamos un dataframe"
+"0",""
+"0","write.csv(aa, file = ""data.csv"")"
+"0","IPV <- read.csv(""data.csv"")"
+"0","rm(list = ls()[!ls() %in% c(""IPV"")])"
+"0",""
+"0","dir_create(""datos"")"
+"0",""
+"0","#Los guardamos sin arreglar"
+"0","write.csv(IPV,  file = ""./datos/ipv.csv"")"
+"0",""
+"0",""
+"0",""
+"0","#Este segundo archivo contiene los datos a nivel autonómico"
+"0","url2 <- ""https://www.ine.es/jaxiT3/files/t/es/px/50913.px?nocab=1"""
+"0","ab <- read.px(url2)"
+"0",""
+"0","#Lo convertimos a CSV para simplificar y creamos un dataframe"
+"0",""
+"0","write.csv(ab, file = ""dataCCAA.csv"")"
+"0","CCAA <- read.csv(""dataCCAA.csv"")"
+"0",""
+"0","#Los guardamos sin arreglar"
+"0","write.csv(CCAA,  file = ""./datos/dataCCAA.csv"")"
+"0",""
+"0","# Para que ab sea un dataframe y no una lista:"
+"0","df_ab <- as.data.frame(ab$DATA$value)"

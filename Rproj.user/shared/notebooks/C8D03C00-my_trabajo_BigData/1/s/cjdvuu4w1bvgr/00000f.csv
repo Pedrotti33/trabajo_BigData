@@ -1,0 +1,18 @@
+"0","df <- IPV %>% 
+  dplyr::rename(Grupo = Grupos.ECOICOP, Dato = Tipo.de.dato)
+
+dff <- df %>% 
+  filter (Grupo == ""Índice general"", Dato == ""Índice"")
+
+p <- ggplot(dff, aes(x = Periodo, y = value, group = 1)) +
+  geom_line(size = 1.08) +
+  scale_x_discrete(breaks = dff$Periodo[substr(dff$Periodo, 6, 7) == ""01""], labels = function(x) substr(x, 1, 4)) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = ""Año"", y = ""Índice"", title = ""Índice nivel de precios (Base100 = 2021)"") +
+  theme_stata() + rotateTextX()
+"
+"2","Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+Please use `linewidth` instead."
+"0",""
+"0","#Utilizamos plotly para hacer el gráfico interactivo"
+"0","plotly::ggplotly(p)"

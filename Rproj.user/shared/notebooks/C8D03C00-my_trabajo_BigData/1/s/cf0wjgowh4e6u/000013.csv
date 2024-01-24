@@ -1,0 +1,8 @@
+"0","#| echo = FALSE,"
+"0","#| out.width = ""100%"""
+"0","devtools::install_github(""gadenbuie/tweetrmd"")"
+"2","Skipping install of 'tweetrmd' from a github remote, the SHA1 (c683b537) has not changed since last install.
+  Use `force = TRUE` to force installation
+"
+"0","library(tweetrmd)"
+"0","include_tweet(""https://twitter.com/juanrallo/status/1749043112243057103"")"
