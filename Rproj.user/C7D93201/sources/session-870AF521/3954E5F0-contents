@@ -1,0 +1,28 @@
+---
+title: Tráiganme a ese tal "Banco Central"        
+image: imagenes/milei_mamado.jpeg 
+about:
+  template: trestles        #- {jolla, solana, ...}
+  image-width: 16em         #- https://cybmeta.com/em-y-rem
+  image-shape: rectangle    #- {rectangle, round, rounded}
+  links:
+    - icon: envelope
+      text: e-mail
+      url: "pepecai@alumni.uv.es"            #- pon tu e-mail
+
+    - icon: github
+      text: Github
+      href: https://github.com/Pedrotti33         #- Github
+---
+        
+Hola, soy Pedro Peñalver Cañigueral
+      
+Esta web sirve para presentar el trabajo final individual para la asignatura "Programación y manejo de datos en la era Del Big Data", optativa de GECO en la Facultad de Economía de la Universitat de València.
+
+La web de la asignatura está [aquí](https://perezp44.github.io/intro-ds-23-24-web/){target="_blank"} y los trabajos de mis compañeros de curso puedes verlos [aquí](https://perezp44.github.io/intro-ds-23-24-web/05-trabajos-estudiantes.html){target="_blank"}.
+
+
+Mi trabajo lleva por título : "Un vistazo a la inflación en España de las últimas dos décadas". El objetivo es ofrecer una perspectiva amplia de cómo se ha comportado la inflación en nuestro país en los últimos 20 años, sin ahondar (por desgracia) en las causas y consecuencias de ésta.
+
+
+El trabajo puede verse [aquí](my_trabajo_BigData.html).

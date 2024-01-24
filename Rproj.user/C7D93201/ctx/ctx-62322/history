@@ -1,0 +1,7 @@
+```{r}
+```{r}
+#| echo = FALSE,
+#| out.width = "100%"
+devtools::install_github("gadenbuie/tweetrmd")
+library(tweetrmd)
+include_tweet("https://twitter.com/juanrallo/status/1749043112243057103")
